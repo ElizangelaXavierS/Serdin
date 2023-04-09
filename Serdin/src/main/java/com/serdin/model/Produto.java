@@ -10,8 +10,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-@Entity //Entidade do Banco
-@Table(name = "tb_produtos") //Configura tabela 
+@Entity //Entidade do Banco(Essa model é uma tabela do banco)
+@Table(name = "tb_produtos") //Configuração da  tabela 
 public class Produto {
 	
 	@Id
@@ -19,7 +19,7 @@ public class Produto {
 	private Long id;
 	
 	@NotBlank(message = "O mome é obrigatório")
-	@Size(min = 3, max = 50, message = "O nome deve comter no mínimo 3 e no máximo 50 caracteres.")
+	@Size(min = 3, max = 50, message = "O nome deve conter no mínimo 3 e no máximo 50 caracteres.")
 	private String nome;
 	
 	@NotBlank(message = "O preço é obrigatório")
@@ -28,5 +28,47 @@ public class Produto {
 	private String tamanho;
 	
 	private int quantidade;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+
+	public String getTamanho() {
+		return tamanho;
+	}
+
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+	
 
 }
