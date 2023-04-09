@@ -27,7 +27,7 @@ public class Produto {
 	
 	private String tamanho;
 	
-	private int quantidade;
+	private Integer quantidade;
 
 	public Long getId() {
 		return id;
@@ -61,11 +61,11 @@ public class Produto {
 		this.tamanho = tamanho;
 	}
 
-	public int getQuantidade() {
+	public Integer getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(int quantidade) {
+	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
 	
